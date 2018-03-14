@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Decentralized Linkedin</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div id="band"></div>
+        <div id="sections">
+            <!-- 3 sections. Your user profile, the messages of other users and the accounts that you can follow -->
+            <section>
+                <h3>My Profile</h3>
+                <div id="profile-content"></div>
+            </section>
+
+            <section>
+                <h3>Messages</h3>
+                <div id="send-area">
+                    <textarea id="write-message" rows="3" placeholder="Write a message..."></textarea>
+                    <button onclick="sendMessage(document.querySelector('#write-message').value)">Send</button>
+                </div>
+                <div id="messages"></div>
+            </section>
+
+            <section>
+                <h3>People to follow</h3>
+                <div id="people-to-follow"></div>
+            </section>
+        </div>
+
+        <script src="index.js"></script>
+    </body>
+</html>

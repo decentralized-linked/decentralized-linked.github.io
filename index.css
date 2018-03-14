@@ -1,0 +1,91 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    color: white;
+}
+
+#band {
+    width: 100%;
+    height: 7px;
+    background-color: rgb(4, 166, 255);
+    margin-bottom: 50px;
+}
+
+section {
+    background-color: rgb(4, 166, 255);
+    width: 30%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px 0 lightgrey;
+    height: 100%;
+}
+
+h3 {
+    margin-top: 0;
+}
+
+input, textarea {
+    border: 0;
+    border-radius: 10px;
+    padding: 10px;
+    width: 95%;
+}
+
+button {
+    border: 0;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(0, 94, 145);
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button:active {
+    background-color: rgb(0, 81, 125);
+}
+
+#sections {
+    display: flex;
+    justify-content: space-around;
+}
+
+#write-message {
+    width: 80%;
+}
+
+#send-area {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.align-center {
+    display: block;
+    margin: auto;
+}
+
+.user-box {
+    background-color: rgb(35, 140, 197);
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.user-box-following {
+    background-color: rgb(71, 164, 214);
+}
+
+.following-button {
+    opacity: 0.5;
+}
+
+.message-box {
+    background-color: rgb(70, 190, 255);
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 10px;
+}
