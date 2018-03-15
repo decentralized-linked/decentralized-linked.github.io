@@ -26,4 +26,31 @@ contract Linked {
 
     // All the messages ever written
     Message[] public messages;
+
+    // Sets the profile of a user
+    function setProfile(bytes32 _name, bytes32 _occupation, string _bio) public {
+        User memory user = User(_name, _occupation, _bio);
+        userInfo[msg.sender] = user;
+    }
+
+    // Adds a new message
+    function writeMessage(string _content) public {
+        Message memory message = Message(_content, msg.sender, now);
+        userMessages[msg.sender].push(message);
+        messages.push(message);
+    }
+
+    // Follows a new user
+    function followUser(address _user) public {
+        userFollowers[msg.sender].push(_user);
+    }
+
+    // Unfollows a user
+    function unfollowUser(address _user) public {
+        for(uint i = 0; i < userFollowers[msg.sender].length; i++) {
+            if(userFollowers[msg.sender][i] == _user) {
+                delete userFollowers[msg.sender][i];
+            }
+        }
+    }
 }
